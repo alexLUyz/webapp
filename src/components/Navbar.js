@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    Jumbotron,
+    //Jumbotron,
     Navbar,
     Nav,
     NavDropdown,
@@ -8,9 +8,8 @@ import {
 
 export default () => {
     return (
-        <Jumbotron>
-        <h1 className="header">Welcome To React-Bootstrap</h1>
-  
+        //<Jumbotron>
+      
         <Navbar id="nb" bg="dark" variant="dark" expand="lg">
             <Navbar.Brand href="#home">
                 <img
@@ -40,15 +39,14 @@ export default () => {
                     <Nav.Link href="#home">Home</Nav.Link>
                     <Nav.Link href="#link">Link</Nav.Link>
                     <Nav.Link href="#deets">More deets</Nav.Link>
-                    <Nav.Link eventKey={2} href="#memes">
+                    {/* <Nav.Link eventKey={2} href="#memes">
                      Dank memes
-                    </Nav.Link>
+                    </Nav.Link> */}
                 </Nav>
          
             </Navbar.Collapse>
         </Navbar>
-        <br />
-      </Jumbotron>
+      //</Jumbotron>
     );
 }
 
