@@ -5,7 +5,6 @@ import Table from './Table';
 import userInfo from '../info';
 
 
-
 class App extends React.Component {
 
     
@@ -19,9 +18,9 @@ class App extends React.Component {
         this.setState({ info: userInfo });
     }
 
-    onRowsSelect = (rows) => {
-        console.log('From the table! ', rows);
-        this.setState({ selectedRows: rows});
+    onRowsSelect = (row) => {
+        console.log('From the table! ', row);
+        //this.setState({ selectedRows: rows});
     }
 
 
@@ -29,7 +28,7 @@ class App extends React.Component {
         if (!this.state.info) return <div>Loading Table...</div> 
 
         else {
-            return <Table info={this.state.info} onRowsSelect={this.onRowsSelect}/>
+            return <Table info={this.state.info} onRowsSelect={this.onRowsSelect} />
         }
     }
 
