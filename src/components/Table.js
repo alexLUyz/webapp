@@ -52,7 +52,7 @@ class Infos extends Component  {
           </Tr>
         );
       });
-  }
+    }
 
 
   render() {
