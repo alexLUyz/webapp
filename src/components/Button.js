@@ -15,15 +15,7 @@ class ButtonParent extends React.Component {
         condition: !this.state.condition
       });
 
-      //this.state.condition ? console.log(this.props.index + ' removed') : console.log(this.props.index + ' added');
-      if (this.state.condition) {
-        this.props.onRowsSelect(this.props.index); 
-      }
-
-      else {
-        this.props.onRowsSelect(this.props.index + 100);
-      }
-      
+      this.state.condition ? this.props.onRowsSelect(this.props.index, false) : this.props.onRowsSelect(this.props.index, true);      
     }
     render() {
       return (

@@ -18,9 +18,8 @@ class App extends React.Component {
         this.setState({ info: userInfo });
     }
 
-    onRowsSelect = (row) => {
-        console.log('From the table! ', row);
-        //this.setState({ selectedRows: rows});
+    onRowsSelect = (row, select) => {
+        select ? this.setState({ selectedRows: [...this.state.selectedRows, row] }) : this.setState({ selectedRows: this.state.selectedRows.filter(element => element !== row) });
     }
 
 
@@ -32,9 +31,9 @@ class App extends React.Component {
         }
     }
 
- 
-
     render() {
+
+        console.log(this.state.selectedRows);
 
         return (
             <Container className="p-2">
