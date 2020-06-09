@@ -7,7 +7,7 @@ class ButtonParent extends React.Component {
       this.state = {
         condition: false
       }
-      this.handleClick = this.handleClick.bind(this)
+      this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
@@ -17,13 +17,15 @@ class ButtonParent extends React.Component {
 
       this.state.condition ? this.props.onRowsSelect(this.props.index, false) : this.props.onRowsSelect(this.props.index, true);      
     }
+
+
     render() {
       return (
         <ButtonChild        
           className={ this.state.condition ? "button toggled" : "button" }
-          toggleClassName={ this.handleClick }
+          toggleClassName={ !this.props.all ? this.handleClick : this.allHandleClick }
         >
-          {this.state.condition ? "Selected" : "Select"}
+          {this.state.condition ? this.props.selected : this.props.select}
         </ButtonChild>
       )
     }
