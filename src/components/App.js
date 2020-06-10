@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import { Container } from "react-bootstrap";
 import Table from './Table';
@@ -19,6 +20,7 @@ class App extends React.Component {
     }
 
     onRowsSelect = (row, select) => {
+        //
         select ? this.setState({ selectedRows: [...this.state.selectedRows, row] }) : this.setState({ selectedRows: this.state.selectedRows.filter(element => element !== row) });
     }
 
