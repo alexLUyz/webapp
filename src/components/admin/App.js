@@ -1,5 +1,4 @@
 import React from 'react';
-//import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import { Container } from "react-bootstrap";
 import Table from './Table';
